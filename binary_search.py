@@ -1,9 +1,9 @@
-# Recursive search using merge sort
+# Binary search
 
 import math
 
 
-def merge_sort(array, num):
+def binary_search(array, num):
     # Handle empty arrays or arrays of one value
     if len(array) == 0:
         return -1
@@ -47,7 +47,26 @@ def main():
     a = [i for i in range(-1, 10, 2)]
     print(a)
     for n in [1, 0, -1, 2, -2, 4, 5, 6, 7, -67, 134]:
-        print("%5d index? %d" % (n, merge_sort(a, n)))
+        print("%5d index? %d" % (n, binary_search(a, n)))
 
 
 main()
+
+# Pseudo
+
+# Binary takes in array and target number
+# returns search on array, num, 0, and len(array-1)
+
+# Search function
+# Finds middle
+
+# Find middle of array
+# if (len(array) % 2 == 0):
+
+# check value at middle
+# if index = target
+#     return Index
+# if index > target
+# slice array
+# if index < target
+# slice and recursively call
