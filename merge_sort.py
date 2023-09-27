@@ -1,9 +1,10 @@
 # Recursive search using merge sort
-# Test with mergesort_test.py
+# Test with merge_sort_test.py
 
 import math
 
-def binary_search(array, num):
+
+def merge_sort(array, num):
     # Handle empty arrays or arrays of one value
     if len(array) == 0:
         return -1
@@ -15,6 +16,7 @@ def binary_search(array, num):
 
     # Send to search algo
     return search(array, num, 0, len(array) - 1)
+
 
 def search(array, num, min, max):
     # Recursive base case: check last two values
@@ -46,7 +48,7 @@ def main():
     a = [i for i in range(-1, 10, 2)]
     print(a)
     for n in [1, 0, -1, 2, -2, 4, 5, 6, 7, -67, 134]:
-        print("%5d index? %d" % (n, binary_search(a, n)))
+        print("%5d index? %d" % (n, merge_sort(a, n)))
 
 
 main()
